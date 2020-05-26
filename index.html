@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Color Changer</title>
+        <!-- Link JavaScript -->
+        <script src="script.js"></script>
+        
+        <!-- CSS only -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        
+        <style>
+            /* Styling the square box */
+            *{
+                box-sizing: border-box;
+            }
+            .ba-square-box{
+            background: rgba(0,255,0, 1);
+            max-width: 200px;
+            margin: auto;
+            position: relative;
+            padding: 40px;
+            }
+            .ba-square-box:before{
+            content:'';
+            display: block;
+            padding-bottom: 100%;
+            background: white;
+            }
+            .ba-square-content{
+            padding: 20px;
+            background:white;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 2;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="/docs/4.5/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+                UAceit
+            </a>
+        </nav>
+        <br>
+        <div class="container">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                  <h1 class="display-4">Color Changer</h1>
+                  <p class="lead">Write the color name or color code in the input field and SNAP!</p>
+                </div>
+            </div>
+            <div class="input-group mb-3" style="width:fit-content;">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">ColorCode</span>
+                </div>
+                <input type="text" class="form-control" placeholder="color code" aria-label="colorcode" aria-describedby="basic-addon1" id="myInput">
+            </div>
+            <br>
+            <button type="button" class="btn btn-primary" onclick="getInputValue();">Find Color</button>
+            <div class="ba-square-box">
+                <div class="ba-square-content"></div>
+            </div>   
+        </div>
+        
+    </body>
+</html>
+
+
+
+
